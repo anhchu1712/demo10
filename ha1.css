@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 25px;
+  color: #ff6f00;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.halloween-image {
+  width: 100%;
+}
+
+.ghost {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+}
+
+.bat {
+  width: 50px;
+  height: 20px;
+  background: #333;
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  transform: rotate(-20deg);
+  box-shadow: 0 0 5px 2px #333;
+}
+
+.bat::after {
+  content: '';
+  width: 50px;
+  height: 20px;
+  background: #333;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(20deg);
+  box-shadow: 0 0 5px 2px #333;
+}
+
+.spider {
+  width: 20px;
+  height: 20px;
+  background: black;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.spider::before,
+.spider::after {
+  content: '';
+  width: 10px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spider::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.spider::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
